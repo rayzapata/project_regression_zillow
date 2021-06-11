@@ -1,5 +1,5 @@
 # Estimation of Home Value with Zillow
-![](https://github.com/ray-zapata/project_regression_zillow/blob/main/logo.png)
+![](https://github.com/ray-zapata/project_regression_zillow/blob/main/assets/logo.png)
 
 ### Table of Contents
 
@@ -28,7 +28,7 @@ V.   [Modules               ](#v-modules)
 
 VI.  [Project Reproduction  ](#vi-project-reproduction)
 
-![](https://github.com/ray-zapata/project_regression_zillow/blob/main/divider.png)
+![](https://github.com/ray-zapata/project_regression_zillow/blob/main/assets/divider.png)
 
 ## I. Project Overview
 
