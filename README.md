@@ -58,7 +58,7 @@ WIP
 
 #### 1. Database Relationships
 
-The Codeup `zillow` SQL database contains twelve tables, nine of which are utilized in this project. `properties_2017` is the base table, and it is linked to eight separate tables: `airconditioningtype`, `architecturalstyletype`, `buildingclasstype`, `heatingorsystemtype`, `predictions_20171`, `propertylandusetype`, and `storytype`. Each table is connected by a pointed arrow with the corresponding foreign keys that link them. This database is read into a pandas DataFrame and prepared in the manner described in the data dictionary below.
+The Codeup `zillow` SQL database contains twelve tables, eight of which have foreign key links with our primary table `properties_2017`: `airconditioningtype`, `architecturalstyletype`, `buildingclasstype`, `heatingorsystemtype`, `predictions_2017`, `propertylandusetype`, `storytype`, and `typeconstructiontype`. Each table is connected by a pointed arrow with the corresponding foreign keys that link them. Many of these tables are unused in this project due to missing values, and this database map serves only to define the database.
 
 ![](https://github.com/ray-zapata/project_regression_zillow/blob/main/assets/databasemap.png)
 
