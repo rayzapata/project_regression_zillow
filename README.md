@@ -1,7 +1,7 @@
 # Estimation of Home Value with Zillow
 ![](https://github.com/ray-zapata/project_regression_zillow/blob/main/assets/logo.png)
 
-### Table of Contents
+## Table of Contents
 
 I.   [Project Overview      ](#i-project-overview)
 1.   [Description           ](#1-description)
@@ -60,7 +60,7 @@ WIP
 
 The Codeup `zillow` SQL database contains twelve tables, nine of which have foreign key links with our primary table `properties_2017`: `airconditioningtype`, `architecturalstyletype`, `buildingclasstype`, `heatingorsystemtype`, `predictions_2017`, `propertylandusetype`, `storytype`, `typeconstructiontype`, and `unique_properties`. Each table is connected by a pointed arrow with the corresponding foreign keys that link them. Many of these tables are unused in this project due to missing values, and this database map serves only to define the database.
 
-![](https://github.com/ray-zapata/blob/main/assets/databasemap.png)
+![](https://github.com/ray-zapata/project_regression_zillow/blob/main/assets/databasemap.png)
 
 #### 2. Data Dictionary
 
@@ -77,24 +77,24 @@ WIP
     - Project summary
     - Instructions to reporoduce
 - [x] Build and use [Trello](https://trello.com/b/V0IPaIgF/regression-project) board for data science pipeline
-- [ ] Consider project needs versus project desires
+- [x] Consider project needs versus project desires
 
 #### 2. Data Acquisition
 ✓ _Plan_ ➜ 🟢 **Acquire** ➜ ☐ _Prepare_ ➜ ☐ _Explore_ ➜ ☐ _Model_ ➜ ☐ _Deliver_
 
-- [ ] Build [`acquire.py`](https://raw.githubusercontent.com/ray-zapata/project_regression_zillow/main/acquire.py) module
-- [ ] Obtain initial data and understand its structure
-- [ ] Plot distributions of variables
-- [ ] Perform data summation
+- [x] Build [`acquire.py`](https://raw.githubusercontent.com/ray-zapata/project_regression_zillow/main/acquire.py) module
+- [x] Obtain initial data and understand its structure
+- [x] Plot distributions of variables
+- [x] Perform data summation
 
 #### 3. Data Preparation
 ✓ _Plan_ ➜ ✓ _Acquire_ ➜ 🟢 **Prepare** ➜ ☐ _Explore_ ➜ ☐ _Model_ ➜ ☐ _Deliver_
 
-- [ ] Build [`prepare.py`](https://raw.githubusercontent.com/ray-zapata/project_regression_zillow/main/prepare.py) module
-- [ ] Address missing or inappropraite values, including outliers
-- [ ] Encode categorical variables
-- [ ] Consider and create new features as needed
-- [ ] Split data into `train`, `validate`, and `test`
+- [x] Build [`prepare.py`](https://raw.githubusercontent.com/ray-zapata/project_regression_zillow/main/prepare.py) module
+- [x] Address missing or inappropraite values, including outliers
+- [x] Encode categorical variables
+- [x] Consider and create new features as needed
+- [x] Split data into `train`, `validate`, and `test`
 
 #### 4. Data Exploration
 ✓ _Plan_ ➜ ✓ _Acquire_ ➜ ✓ _Prepare_ ➜ 🟢 **Explore** ➜ ☐ _Model_ ➜ ☐ _Deliver_
@@ -118,10 +118,9 @@ WIP
 #### 6. Product Delivery
 ✓ _Plan_ ➜ ✓ _Acquire_ ➜ ✓ _Prepare_ ➜ ✓ _Explore_ ➜ ✓ _Model_ ➜ 🟢 **Deliver**
 - [ ] Prepare Jupyter Notebook of project details through data science pipeline
+- [ ] With additional time, continue with the exploration beyond MVP
 - [ ] Proof read and complete README and project repository
 - [ ] Prepare slide deck presentation of project
-
-WIP
 
 ## V. Modules
 
