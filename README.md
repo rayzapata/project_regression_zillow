@@ -5,12 +5,12 @@
 
 I.   [Project Overview      ](#i-project-overview)
 1.   [Description           ](#1-description)
-2.   [Goals                 ](#2-goals)
-3.   [Deliverables          ](#3-deliverables)
+2.   [Deliverables          ](#2-deliverables)
 
 II.  [Project Summary       ](#ii-project-summary)
-1.   [Thoughts & Hypotheses ](#1-thoughts--hypotheses)
-2.   [Findings & Next Phase ](#2-findings--next-phase)
+1.   [Goals                 ](#1-goals)
+2.   [Thoughts & Hypotheses ](#2-thoughts--hypotheses)
+3.   [Findings & Next Phase ](#3-findings--next-phase)
 
 III. [Data Context          ](#iii-data-context)
 1.   [Database Relationships](#1-database-relationships)
@@ -36,21 +36,21 @@ VI.  [Project Reproduction  ](#vi-project-reproduction)
 
 WIP
 
-#### 2. Goals
-
-WIP
-
-#### 3. Deliverables
+#### 2. Deliverables
 
 WIP
 
 ## II. Project Summary
 
-#### 1. Thoughts & Hypotheses
+#### 1. Goals
 
 WIP
 
-#### 2. Findings & Next Phase
+#### 2. Thoughts & Hypotheses
+
+WIP
+
+#### 3. Findings & Next Phase
 
 WIP
 
@@ -60,7 +60,7 @@ WIP
 
 The Codeup `zillow` SQL database contains twelve tables, nine of which have foreign key links with our primary table `properties_2017`: `airconditioningtype`, `architecturalstyletype`, `buildingclasstype`, `heatingorsystemtype`, `predictions_2017`, `propertylandusetype`, `storytype`, `typeconstructiontype`, and `unique_properties`. Each table is connected by a pointed arrow with the corresponding foreign keys that link them. Many of these tables are unused in this project due to missing values, and this database map serves only to define the database.
 
-![](https://github.com/ray-zapata/project_regression_zillow/blob/main/assets/databasemap.png)
+![](https://github.com/ray-zapata/blob/main/assets/databasemap.png)
 
 #### 2. Data Dictionary
 
@@ -69,26 +69,57 @@ WIP
 ## IV. Process
 
 #### 1. Project Planning
+🟢 **Plan** ➜ ☐ _Acquire_ ➜ ☐ _Prepare_ ➜ ☐ _Explore_ ➜ ☐ _Model_ ➜ ☐ _Deliver_
 
-WIP
+- [ ] Build this [README](#estimation-of-home-value-with-zillow) containing:
+    - Project overview
+    - Initial thoughts and hypotheses
+    - Project summary
+    - Instructions to reporoduce
+- [x] Build and use [Trello](https://trello.com/b/V0IPaIgF/regression-project) board for data science pipeline
+- [ ] Consider project needs versus project desires
 
 #### 2. Data Acquisition
+✓ _Plan_ ➜ 🟢 **Acquire** ➜ ☐ _Prepare_ ➜ ☐ _Explore_ ➜ ☐ _Model_ ➜ ☐ _Deliver_
 
-WIP
+- [ ] Build [`acquire.py`](https://raw.githubusercontent.com/ray-zapata/project_regression_zillow/main/acquire.py) module
+- [ ] Obtain initial data and understand its structure
+- [ ] Plot distributions of variables
+- [ ] Perform data summation
 
 #### 3. Data Preparation
+✓ _Plan_ ➜ ✓ _Acquire_ ➜ 🟢 **Prepare** ➜ ☐ _Explore_ ➜ ☐ _Model_ ➜ ☐ _Deliver_
 
-WIP
+- [ ] Build [`prepare.py`](https://raw.githubusercontent.com/ray-zapata/project_regression_zillow/main/prepare.py) module
+- [ ] Address missing or inappropraite values, including outliers
+- [ ] Encode categorical variables
+- [ ] Consider and create new features as needed
+- [ ] Split data into `train`, `validate`, and `test`
 
 #### 4. Data Exploration
+✓ _Plan_ ➜ ✓ _Acquire_ ➜ ✓ _Prepare_ ➜ 🟢 **Explore** ➜ ☐ _Model_ ➜ ☐ _Deliver_
 
-WIP
+- [ ] Build [`explore.py`](https://raw.githubusercontent.com/ray-zapata/project_regression_zillow/main/explore.py) module
+- [ ] Visualize relationships of variables
+- [ ] Formulate hypotheses
+- [ ] Perform statistical tests
+- [ ] Decide features to use use for models
 
 #### 5. Modeling & Evaluation
+✓ _Plan_ ➜ ✓ _Acquire_ ➜ ✓ _Prepare_ ➜ ✓ _Explore_ ➜ 🟢 **Model** ➜ ☐ _Deliver_
 
-WIP
+- [ ] Establish baseline prediction
+- [ ] Establish features and models to be used
+- [ ] Create, fit, and predict with models
+- [ ] Evaluate models with out-of-sample data
+- [ ] Utilize best performing model on `test` data
+- [ ] Summarize, visualize, and interpret findings
 
 #### 6. Product Delivery
+✓ _Plan_ ➜ ✓ _Acquire_ ➜ ✓ _Prepare_ ➜ ✓ _Explore_ ➜ ✓ _Model_ ➜ 🟢 **Deliver**
+- [ ] Prepare Jupyter Notebook of project details through data science pipeline
+- [ ] Proof read and complete README and project repository
+- [ ] Prepare slide deck presentation of project
 
 WIP
 
@@ -100,4 +131,4 @@ WIP
 
 WIP
 
-[Return to Top](https://github.com/ray-zapata/project_regression_zillow#estimation-of-home-value-with-zillow)
+[[Return to Top]](#estimation-of-home-value-with-zillow)
