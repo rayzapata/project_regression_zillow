@@ -1,4 +1,4 @@
-# Estimation of Home Value with Zillow
+# Predicting Home Values with Zillow
 ![](https://github.com/ray-zapata/project_regression_zillow/blob/main/assets/logo.png)
 
 ## Table of Contents
@@ -64,14 +64,25 @@ The Codeup `zillow` SQL database contains twelve tables, nine of which have fore
 
 #### 2. Data Dictionary
 
-WIP
+Following acquisition and preparation of the initial SQL database, the DataFrames used in this project contain the following variables. Contained values are defined along with their respective data types.
+
+| Variable          | Definition                                         | Data Type |
+|:-----------------:|:--------------------------------------------------:|:---------:|
+| bedrooms          | count of bedrooms on property                      | integer   |
+| bathrooms         | count of bathrooms and half-bathrooms on property  | float     |
+| fips              | federal information processing standards codes     | integer   |
+| square_feet       | total calculated square feet in property structure | float     |
+| tax_amount_usd    | property taxes based on assessed value in USD      | float     |
+| tax_value_usd *   | assessed value of property in USD                  | float     |
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  * Target variable
 
 ## IV. Process
 
 #### 1. Project Planning
 🟢 **Plan** ➜ ☐ _Acquire_ ➜ ☐ _Prepare_ ➜ ☐ _Explore_ ➜ ☐ _Model_ ➜ ☐ _Deliver_
 
-- [ ] Build this [README](#estimation-of-home-value-with-zillow) containing:
+- [x] Build this [README](#estimation-of-home-value-with-zillow) containing:
     - Project overview
     - Initial thoughts and hypotheses
     - Project summary
@@ -99,18 +110,18 @@ WIP
 #### 4. Data Exploration
 ✓ _Plan_ ➜ ✓ _Acquire_ ➜ ✓ _Prepare_ ➜ 🟢 **Explore** ➜ ☐ _Model_ ➜ ☐ _Deliver_
 
-- [ ] Build [`explore.py`](https://raw.githubusercontent.com/ray-zapata/project_regression_zillow/main/explore.py) module
-- [ ] Visualize relationships of variables
-- [ ] Formulate hypotheses
-- [ ] Perform statistical tests
-- [ ] Decide features to use use for models
+- [x] Build [`explore.py`](https://raw.githubusercontent.com/ray-zapata/project_regression_zillow/main/explore.py) module
+- [x] Visualize relationships of variables
+- [x] Formulate hypotheses
+- [x] Perform statistical tests
+- [x] Decide features to use use for models
 
 #### 5. Modeling & Evaluation
 ✓ _Plan_ ➜ ✓ _Acquire_ ➜ ✓ _Prepare_ ➜ ✓ _Explore_ ➜ 🟢 **Model** ➜ ☐ _Deliver_
 
-- [ ] Establish baseline prediction
-- [ ] Establish features and models to be used
-- [ ] Create, fit, and predict with models
+- [x] Establish baseline prediction
+- [x] Establish features and models to be used
+- [x] Create, fit, and predict with models
 - [ ] Evaluate models with out-of-sample data
 - [ ] Utilize best performing model on `test` data
 - [ ] Summarize, visualize, and interpret findings
@@ -124,10 +135,13 @@ WIP
 
 ## V. Modules
 
-WIP
+- [`acquire`](https://raw.githubusercontent.com/ray-zapata/project_regression_zillow/main/acquire.py)
+- [`prepare`](https://raw.githubusercontent.com/ray-zapata/project_regression_zillow/main/prepare.py)
+- [`explore`](https://raw.githubusercontent.com/ray-zapata/project_regression_zillow/main/explore.py)
+- [`model`  ](https://raw.githubusercontent.com/ray-zapata/project_regression_zillow/main/model.py)
 
 ## VI. Project Reproduction
 
 WIP
 
-[[Return to Top]](#estimation-of-home-value-with-zillow)
+[[Return to Top]](#predicting-home-value-with-zillow)
