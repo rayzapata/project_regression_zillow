@@ -45,6 +45,13 @@ def get_sql(query, db_name, use_csv=True):
 
 def acquire_mvp(use_csv=False):
     '''
+
+    Using get_sql function we pass a specific query to obtain the MVP'
+    variables to create a DataFrame using the property_id unique
+    identifier as the index
+
+    This function acquires only the data need to construct the MVP
+
     '''
 
     # assign sql query for specified data

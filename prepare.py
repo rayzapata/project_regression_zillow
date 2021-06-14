@@ -48,6 +48,10 @@ def shed_zscore_outliers(df, exclude=None):
 
 def make_dummies(df, cols):
     '''
+
+    Takes in a DataFrame and list of columns to split that column into one for
+    each while dropping the first
+
     '''
 
     # create dum-dums from passed cols list, drop first
@@ -84,6 +88,11 @@ def split_data(df, target):
 
 def prepare_mvp(use_csv=False):
     '''
+
+    Takes the DataFrame from acquire_mvp function and prepares a DataFrame to
+    obtain and explore the project MVP, converting the fips column into human
+    readable county names
+    
     '''
 
     # acquire mvp data from database
@@ -106,6 +115,10 @@ def prepare_mvp(use_csv=False):
 
 def show_distributions(df):
     '''
+
+    Plots the distrubtion for all columns within dataframe and automatically
+    scaled dimensions to the number of required subplots
+    
     '''
 
     # define dimensions for subplots
