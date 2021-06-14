@@ -49,6 +49,8 @@ This project serves to fulfill the requests made to the Zillow data science depa
 
 Utilizing the data available from Zillow, this project sets out to best predict value in USD of properties sold in 2017 during the "hot months" of May, June, July, and August. Property value in this context is defined as the tax appraised value of land and any structures built upon it. Through the process of preparing and exploring data, we will find drivers of single unit property value and create predictive regression models to predict that value using the count of bathrooms, bedrooms and the calculated finished square feet of the structure.
 
+Secondary to this main objective, the data science team is also requested to obtain the distributions and estimation of tax rates for each of the counties where these properties exist. Using the Federal Information Processing Standards (FIPS) codes to obtain county names, and the tax assesed value and tax amount, we will calculate and visualize this request.
+
 #### 2. Initial Thoughts & Hypothesis
 
 The initial hypothesis of the project was that as the dimensions of the structure on the property increased, so too would it's value. The same was considered true for the count of bathrooms and bedrooms on the property as well, but was not believed to be as strong a driver as size. It is also believed that size and location of the land itself would play a role in property value, and this is a potential avenue of future exploration after completing the minimally viable product (MVP).
@@ -57,7 +59,7 @@ The initial hypothesis of the project was that as the dimensions of the structur
 
 Through statistical testing, we found evidence that counts of bathrooms and bedrooms as well as structure finished square feet had a positive relationship with property value. In creating our models, we utilized all three requested features as part of training and fitting for the MVP, and created a second degree polynomial regression model which performed well enough to make it through to the testing dataset. With a root mean squared error of $271,768.12 on the final test, this model maintained consistent performance through each stage. With each model created, it was found that the higher the true value, the larger the residuals of predictions grew.
 
-Using the Federal Information Processing Standards (FIPS) codes within the data, these identifiers were using with data from census.gov to obtain counties for each property. Using the tax assessed value and the tax payment for each property, the distribution of tax rates were obtained, and then a calculated average tax rate for each county as state below. All counties were located within the US state of California.
+Using the FIPS codes within the data, these identifiers were using with data from [census.gov](https://www.census.gov/prod/techdoc/cbp/95-96cd/fips-st.pdf) to obtain counties for each property. Using the tax assessed value and the tax payment for each property, the distribution of tax rates were obtained, and then a calculated average tax rate for each county as stated below. All counties were located within the US state of California.
 
 - Los Angeles County: ≈1.38%
 - Orange County: ≈1.21%
@@ -81,6 +83,7 @@ Following acquisition and preparation of the initial SQL database, the DataFrame
 |:-----------------:|:--------------------------------------------------:|:---------:|
 | bedrooms          | count of bedrooms on property                      | integer   |
 | bathrooms         | count of bathrooms and half-bathrooms on property  | float     |
+| county            | human readble name of county where property exists | object    |
 | fips              | federal information processing standards codes     | integer   |
 | square_feet       | total calculated square feet in property structure | float     |
 | tax_amount_usd    | property taxes based on assessed value in USD      | float     |
