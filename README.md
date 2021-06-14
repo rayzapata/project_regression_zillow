@@ -34,25 +34,36 @@ VI.  [Project Reproduction  ](#vi-project-reproduction)
 
 #### 1. Description
 
-WIP
+This project serves to fulfill the requests made to the Zillow data science department to predict the values of "single unit properties." With the available data, it is also requested to obtain county specific tax rates and their distributions.
 
 #### 2. Deliverables
 
-WIP
+- GitHub repository and [README](#estimation-of-home-value-with-zillow) stating project overview, goals, findings, and summary
+- Jupyter [Notebook](https://nbviewer.jupyter.org/github/ray-zapata/project_regression_zillow/blob/main/zillow.ipynb) showing detailed process through data science pipeline
+- Slide deck [presentation]() summarizing findings of driver for single unite property values
+
 
 ## II. Project Summary
 
 #### 1. Goals
 
-WIP
+Utilizing the data available from Zillow, this project sets out to best predict value in USD of properties sold in 2017 during the "hot months" of May, June, July, and August. Property value in this context is defined as the tax appraised value of land and any structures built upon it. Through the process of preparing and exploring data, we will find drivers of single unit property value and create predictive regression models to predict that value using the count of bathrooms, bedrooms and the calculated finished square feet of the structure.
 
-#### 2. Thoughts & Hypotheses
+#### 2. Initial Thoughts & Hypothesis
 
-WIP
+The initial hypothesis of the project was that as the dimensions of the structure on the property increased, so too would it's value. The same was considered true for the count of bathrooms and bedrooms on the property as well, but was not believed to be as strong a driver as size. It is also believed that size and location of the land itself would play a role in property value, and this is a potential avenue of future exploration after completing the minimally viable product (MVP).
 
 #### 3. Findings & Next Phase
 
-WIP
+Through statistical testing, we found evidence that counts of bathrooms and bedrooms as well as structure finished square feet had a positive relationship with property value. In creating our models, we utilized all three requested features as part of training and fitting for the MVP, and created a second degree polynomial regression model which performed well enough to make it through to the testing dataset. With a root mean squared error of $271,768.12 on the final test, this model maintained consistent performance through each stage. With each model created, it was found that the higher the true value, the larger the residuals of predictions grew.
+
+Using the Federal Information Processing Standards (FIPS) codes within the data, these identifiers were using with data from census.gov to obtain counties for each property. Using the tax assessed value and the tax payment for each property, the distribution of tax rates were obtained, and then a calculated average tax rate for each county as state below. All counties were located within the US state of California.
+
+- Los Angeles County: ≈1.38%
+- Orange County: ≈1.21%
+- Ventura County: ≈1.2%
+
+With additional time, we will be able to explore further variables as model features. It is a continuing hypothesis that location and lot size will play a strong role in better predicting when the true value is higher.
 
 ## III. Data Context
 
@@ -86,23 +97,22 @@ Following acquisition and preparation of the initial SQL database, the DataFrame
     - Project overview
     - Initial thoughts and hypotheses
     - Project summary
-    - Instructions to reporoduce
+    - Instructions to reproduce
 - [x] Build and use [Trello](https://trello.com/b/V0IPaIgF/regression-project) board for data science pipeline
 - [x] Consider project needs versus project desires
 
 #### 2. Data Acquisition
 ✓ _Plan_ ➜ 🟢 **Acquire** ➜ ☐ _Prepare_ ➜ ☐ _Explore_ ➜ ☐ _Model_ ➜ ☐ _Deliver_
 
-- [x] Build [`acquire.py`](https://raw.githubusercontent.com/ray-zapata/project_regression_zillow/main/acquire.py) module
 - [x] Obtain initial data and understand its structure
-- [x] Plot distributions of variables
+- [x] Remedy any inconsistencies, duplications, or structural problems within data
 - [x] Perform data summation
 
 #### 3. Data Preparation
 ✓ _Plan_ ➜ ✓ _Acquire_ ➜ 🟢 **Prepare** ➜ ☐ _Explore_ ➜ ☐ _Model_ ➜ ☐ _Deliver_
 
-- [x] Build [`prepare.py`](https://raw.githubusercontent.com/ray-zapata/project_regression_zillow/main/prepare.py) module
-- [x] Address missing or inappropraite values, including outliers
+- [x] Address missing or inappropriate values, including outliers
+- [x] Plot distributions of variables
 - [x] Encode categorical variables
 - [x] Consider and create new features as needed
 - [x] Split data into `train`, `validate`, and `test`
@@ -110,38 +120,45 @@ Following acquisition and preparation of the initial SQL database, the DataFrame
 #### 4. Data Exploration
 ✓ _Plan_ ➜ ✓ _Acquire_ ➜ ✓ _Prepare_ ➜ 🟢 **Explore** ➜ ☐ _Model_ ➜ ☐ _Deliver_
 
-- [x] Build [`explore.py`](https://raw.githubusercontent.com/ray-zapata/project_regression_zillow/main/explore.py) module
 - [x] Visualize relationships of variables
 - [x] Formulate hypotheses
 - [x] Perform statistical tests
-- [x] Decide features to use use for models
+- [x] Decide upon features and models to be used
 
 #### 5. Modeling & Evaluation
 ✓ _Plan_ ➜ ✓ _Acquire_ ➜ ✓ _Prepare_ ➜ ✓ _Explore_ ➜ 🟢 **Model** ➜ ☐ _Deliver_
 
 - [x] Establish baseline prediction
-- [x] Establish features and models to be used
 - [x] Create, fit, and predict with models
-- [ ] Evaluate models with out-of-sample data
-- [ ] Utilize best performing model on `test` data
-- [ ] Summarize, visualize, and interpret findings
+- [x] Evaluate models with out-of-sample data
+- [x] Utilize best performing model on `test` data
+- [x] Summarize, visualize, and interpret findings
 
 #### 6. Product Delivery
 ✓ _Plan_ ➜ ✓ _Acquire_ ➜ ✓ _Prepare_ ➜ ✓ _Explore_ ➜ ✓ _Model_ ➜ 🟢 **Deliver**
-- [ ] Prepare Jupyter Notebook of project details through data science pipeline
-- [ ] With additional time, continue with the exploration beyond MVP
-- [ ] Proof read and complete README and project repository
+- [x] Prepare Jupyter Notebook of project details through data science pipeline
+- [ ] With additional time, continue with exploration beyond MVP
+- [x] Proof read and complete README and project repository
 - [ ] Prepare slide deck presentation of project
 
 ## V. Modules
 
-- [`acquire`](https://raw.githubusercontent.com/ray-zapata/project_regression_zillow/main/acquire.py)
-- [`prepare`](https://raw.githubusercontent.com/ray-zapata/project_regression_zillow/main/prepare.py)
-- [`explore`](https://raw.githubusercontent.com/ray-zapata/project_regression_zillow/main/explore.py)
-- [`model`  ](https://raw.githubusercontent.com/ray-zapata/project_regression_zillow/main/model.py)
+The created modules used in this project below contain full comments an docstrings to better understand their operation. Where applicable, all functions used `random_sate=19` at all times. Use of functions requiring access to the Codeup database require an additional module named `env.py`. See project reproduction for more detail.
+
+- [`acquire`](https://raw.githubusercontent.com/ray-zapata/project_regression_zillow/main/acquire.py): contains functions used in initial data acquisition leading into the prepare phase
+- [`prepare`](https://raw.githubusercontent.com/ray-zapata/project_regression_zillow/main/prepare.py): contains functions used to prepare data for exploration and visualization
+- [`explore`](https://raw.githubusercontent.com/ray-zapata/project_regression_zillow/main/explore.py): contains functions to visualize the prepared data and estimate the best drivers of property value
+- [`model`  ](https://raw.githubusercontent.com/ray-zapata/project_regression_zillow/main/model.py): contains functions to create, test models and visualize their performance
 
 ## VI. Project Reproduction
 
-WIP
+To recreate and reproduce results of this project, you will need to create a module named `env.py`. This file will need to contain login credentials for the Codeup database server housed in corresponding variables named `host`, `username`, and `password`. You will also need to create the following function within. This is used in all functions that acquire data from the SQL server to create the URL for connecting. `db_name` needs to be passed as a string that matches exactly with the name of a database on the server.
 
-[[Return to Top]](#predicting-home-value-with-zillow)
+```py
+def get_connection(db_name):
+    return f'mysql+pymysql://{username}:{password}@{host}/{db_name}'
+```
+
+After its creation, ensure this file is not uploaded or leaked by ensuring git does not interact with it. When using any function housed in the modules used, ensure full reading of docstrings to understand its use and passed arguments or parameters.
+
+[[Return to Top]](#predicting-home-values-with-zillow)
