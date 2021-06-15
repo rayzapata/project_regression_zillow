@@ -13,7 +13,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import MinMaxScaler
 
 # import from created modules
-from acquire import acquire_mvp
+from acquire import acquire_mvp, get_sql
 
 
 #################### Prepare Data ####################
@@ -138,3 +138,44 @@ def show_distributions(df):
     # set figure title
     plt.suptitle('Distribution of Variables')
     plt.show()
+
+
+#################### Obtain Wrangled Zillow ####################
+
+
+query = '''
+SELECT
+    properties_2017.id AS property_id,
+    bedroomcnt,
+    calculatedbathnbr,
+    calculatedfinishedsquarefeet,
+    latitude,
+    longitude,
+    regionidzip,
+    taxvaluedollarcnt
+FROM properties_2017
+INNER JOIN predictions_2017 USING(parcelid)
+LEFT JOIN propertylandusetype USING(propertylandusetypeid)
+WHERE
+    propertylandusetypeid IN (261, 263, 264, 266, 268, 275, 276, 279) AND
+    CAST(transactiondate AS DATE) BETWEEN 20170501 AND 20170831
+ORDER BY
+    properties_2017.id ASC
+;'''
+
+
+def wrangle_zillow(use_csv=True):
+    # get 
+    df = get_sql(query, 'zillow', use_csv=use_csv)
+    df = df.dropna()
+    df = df.set_index('property_id')
+    df['latzip'] = df.latitude / df.regionidzip
+    df['lonzip'] = df.longitude / df.regionidzip
+    df = shed_zscore_outliers(df)
+
+    df, \
+    X_train, y_train, \
+    X_validate, y_validate, \
+    X_test, y_test = split_data(df, 'taxvaluedollarcnt')
+
+    return X_train, y_train, X_validate, y_validate, X_test, y_test
