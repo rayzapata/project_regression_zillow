@@ -62,9 +62,9 @@ The initial hypothesis of the project was that as the dimensions of the structur
 
 Through statistical testing, we found evidence that counts of bathrooms and bedrooms as well as structure finished square feet had a positive relationship with property value. In creating our models, we utilized all three requested features as part of training and fitting for the MVP, and created a second degree polynomial regression model which performed well enough to make it through to the testing dataset. With a root mean squared error of $271,768.12 on the final test, this model maintained consistent performance through each stage. With each model created, it was found that the higher the true value, the larger the residuals of predictions grew.
 
-Using the FIPS codes within the data, these identifiers were used with data from [census.gov](https://www.census.gov/prod/techdoc/cbp/95-96cd/fips-st.pdf) to obtain counties for each property. Using the tax assessed value and the tax payment for each property, the distribution of tax rates were obtained, and then a calculated average tax rate for each county as stated below. All counties were located within the US state of California.
+**Estimating Tax Rates**
 
-**County Estimated Tax Rates**
+Using the FIPS codes within the data, these identifiers were used with data from [census.gov](https://www.census.gov/prod/techdoc/cbp/95-96cd/fips-st.pdf) to obtain counties for each property. Using the tax assessed value and the tax payment for each property, the distribution of tax rates were obtained, and then a calculated average tax rate for each county as stated below. All counties were located within the US state of California.
 
 | County      | Average Tax | Average Value | Tax Rate |
 |:------------|:-----------:|:-------------:|:--------:|
@@ -93,7 +93,7 @@ Following acquisition and preparation of the initial SQL database, the DataFrame
 | bathrooms         | count of bathrooms and half-bathrooms on property  | float     |
 | county            | human readable name of county where property exists| object    |
 | fips              | federal information processing standards codes     | integer   |
-| id                | unique identifier for each property                | index     |
+| property_id       | unique identifier for each property                | index     |
 | square_feet       | total calculated square feet in property structure | float     |
 | tax_amount_usd    | property taxes based on assessed value in USD      | float     |
 | tax_value_usd *   | assessed value of property in USD                  | float     |
@@ -152,7 +152,7 @@ Following acquisition and preparation of the initial SQL database, the DataFrame
 - [x] Prepare Jupyter Notebook of project details through data science pipeline
 - [ ] With additional time, continue with exploration beyond MVP
 - [x] Proof read and complete README and project repository
-- [ ] Prepare slide deck presentation of project
+- [X] Prepare slide deck presentation of project
 
 ### V. Modules
 ---
