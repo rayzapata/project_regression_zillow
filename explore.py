@@ -35,7 +35,7 @@ def get_tax_rates(use_csv=True):
     # start plot
     plt.hist(df[df.county == 'Los Angeles'].tax_rate, bins=np.linspace(0, 0.1, 50), color='red', alpha=0.25, log=True, label='Los Angeles')
     plt.hist(df[df.county == 'Orange'].tax_rate, bins=np.linspace(0, 0.1, 50), color='green', alpha=0.25, log=True, label='Orange')
-    plt.hist(df[df.county == 'Venture'].tax_rate, bins=np.linspace(0, 0.1, 50), color='blue', alpha=0.25, log=True, label='Venture')
+    plt.hist(df[df.county == 'Ventura'].tax_rate, bins=np.linspace(0, 0.1, 50), color='blue', alpha=0.25, log=True, label='Ventura')
     plt.rcParams['legend.title_fontsize'] = 20
     plt.xlim(0, 0.1)
     plt.xlabel('Tax Rate')
