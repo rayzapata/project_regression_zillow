@@ -176,4 +176,4 @@ def get_connection(db_name):
 
 After its creation, ensure this file is not uploaded or leaked by ensuring git does not interact with it. When using any function housed in the created modules above, ensure full reading of comments and docstrings to understand its proper use and passed arguments or parameters.
 
-[[Return to Top]](##predicting-property-values-with-zillow)
+[[Return to Top]](#predicting-property-values-with-zillow)
