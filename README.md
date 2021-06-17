@@ -1,4 +1,4 @@
-# Predicting Home Values with Zillow
+# Predicting Property Values with Zillow
 ![](https://github.com/ray-zapata/project_regression_zillow/blob/main/assets/logo.png)
 
 ### Table of Contents
@@ -40,9 +40,9 @@ This project serves to fulfill the requests made to the Zillow data science depa
 
 #### 2. Deliverables
 
-- GitHub repository and [README](#estimation-of-home-value-with-zillow) stating project overview, goals, findings, and summary
+- GitHub repository and [README](#predicting-property-values-with-zillow) stating project overview, goals, findings, and summary
 - Jupyter [Notebook](https://nbviewer.jupyter.org/github/ray-zapata/project_regression_zillow/blob/main/zillow.ipynb) showing detailed process through data science pipeline
-- Slide deck [presentation](https://www.canva.com/design/DAEhaQ2Ce24/q9aP7PIiZ7IF6nbTNzyVcA/view?utm_content=DAEhaQ2Ce24&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink) summarizing findings of driver for single unite property values
+- Slide deck [presentation](https://www.canva.com/design/DAEhaQ2Ce24/q9aP7PIiZ7IF6nbTNzyVcA/view?utm_content=DAEhaQ2Ce24&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink) summarizing findings of driver for single unit property values
 
 
 ### II. Project Summary
@@ -64,7 +64,7 @@ Through statistical testing, we found evidence that counts of bathrooms and bedr
 
 **Estimating Tax Rates**
 
-Using the FIPS codes within the data, these identifiers were used with data from [census.gov](https://www.census.gov/prod/techdoc/cbp/95-96cd/fips-st.pdf) to obtain counties for each property. Using the tax assessed value and the tax payment for each property, the distribution of tax rates were obtained, and then a calculated average tax rate for each county as stated below. All counties were located within the US state of California.
+Using the FIPS codes within the data, these identifiers were used with data from [census.gov](https://www.census.gov/prod/techdoc/cbp/95-96cd/fips-st.pdf) to obtain counties for each property. Using the tax assessed value and the tax payment for each property, the [distribution of tax rates](https://raw.githubusercontent.com/ray-zapata/project_regression_zillow/main/tax_rates.csv) were obtained, and then a calculated average tax rate for each county as stated below. All counties were located within the US state of California.
 
 | County      | Average Tax | Average Value | Tax Rate |
 |:------------|:-----------:|:-------------:|:--------:|
@@ -150,7 +150,7 @@ Following acquisition and preparation of the initial SQL database, the DataFrame
 #### 6. Product Delivery
 ✓ _Plan_ ➜ ✓ _Acquire_ ➜ ✓ _Prepare_ ➜ ✓ _Explore_ ➜ ✓ _Model_ ➜ 🟢 **Deliver**
 - [x] Prepare Jupyter Notebook of project details through data science pipeline
-- [ ] With additional time, continue with exploration beyond MVP
+- [x] With additional time, continue with exploration beyond MVP
 - [x] Proof read and complete README and project repository
 - [X] Prepare slide deck presentation of project
 
@@ -176,4 +176,4 @@ def get_connection(db_name):
 
 After its creation, ensure this file is not uploaded or leaked by ensuring git does not interact with it. When using any function housed in the created modules above, ensure full reading of comments and docstrings to understand its proper use and passed arguments or parameters.
 
-[[Return to Top]](#predicting-home-values-with-zillow)
+[[Return to Top]](##predicting-property-values-with-zillow)
